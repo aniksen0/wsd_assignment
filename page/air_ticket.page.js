@@ -110,14 +110,22 @@ class airTicketPage extends BasePage {
   async captureFlightPrices()
   {
     const priceOnListLocator = this.airTicketObject.allPriceFromList;
-    const pricesCount = await priceOnListLocator.count();
-    const pricesArray = [];
-    for (let i = 0; i < pricesCount; i++) {
+    const count = await priceOnListLocator.count();
+    const array = [];
+    for (let i = 0; i < count; i++) {
       const priceText = await priceOnListLocator.nth(i).innerText();
       const numericPrice = priceText.replace(/[^\d]/g, '');
-      pricesArray.push(numericPrice);
+      array.push(numericPrice);
     }
-    console.log("Captured flight prices:", pricesArray);
+    console.log("Captured flight prices:", array);
+    let lower = 0;
+    for (let i = 0; i < array.length; i++) {
+      const price = parseInt(Array[i], 10);
+      if (price < lower || lower === 0) {
+        lower = price;
+      }
+    }
+    console.log("Lowest price is:", lower);
   }
 }
 

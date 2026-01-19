@@ -25,7 +25,7 @@ test('TC02-Verify one way button has been selected', async () => {
   await airTicket.verifyOneWayButtonSelected();
 });
 
-test.skip('TC03-Verify jouney date can be selected as tomorrow', async () => {
+test('TC03-Verify jouney date can be selected as tomorrow', async () => {
   await airTicket.selectJouneyDate();
 });
 
@@ -64,7 +64,7 @@ test('TC-10 Close the sign-in modal.', async () => {
   await airTicket.closeSignInModal();
 });
 
-test('TC-11 Capture the prices of the currently listed flights into an array and print it on CONSOLE', async () => {
+test.only('TC-11 Capture the prices of the currently listed flights into an array and print it on CONSOLE', async () => {
   await airTicket.clickOnFirstFlightBookTicket();
   await airTicket.clickContinueButton();
   await airTicket.verifyLoginHeader();

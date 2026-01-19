@@ -1,5 +1,5 @@
 
-# Playwright automation with CI/CD.
+# Playwright automation
 This is a web test automation framework, This automation script follows
 - Page Object Model
 - Reporting tools
@@ -7,6 +7,9 @@ This is a web test automation framework, This automation script follows
 - structured code format
 - clean and reusable code
 - hassle free plug and run
+
+
+# Reasoning behind this approach
 
 **Description:**
 - `tests/`: Contains all test case files.
@@ -77,4 +80,4 @@ npx playwright show-report
 - If you encounter issues, ensure all dependencies are installed and Node.js is up to date.
 - For Playwright-specific errors, refer to the [Playwright documentation](https://playwright.dev/docs/intro).
 
----
+--- 
