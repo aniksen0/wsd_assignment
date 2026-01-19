@@ -73,13 +73,6 @@ npx playwright show-report
 - `npm test`: Runs all Playwright tests as defined in `package.json`.
 - You can add more scripts in `package.json` as needed (e.g., for linting, cleaning reports, etc.).
 
-### 6. CI/CD Integration
-- The workflow file `.github/workflows/playwright.yml` automates test execution in CI/CD pipelines (such as GitHub Actions).
-- On every push or pull request, tests run automatically to ensure code quality and catch regressions early.
-- Test results are collected and an HTML report is generated for each run, making it easy to review outcomes directly from the pipeline.
-- The workflow can be customized to include steps for installing dependencies, running lint checks, and publishing reports or artifacts.
-- This setup helps maintain a reliable, consistent testing process and supports rapid development cycles.
-
 ### 7. Troubleshooting
 - If you encounter issues, ensure all dependencies are installed and Node.js is up to date.
 - For Playwright-specific errors, refer to the [Playwright documentation](https://playwright.dev/docs/intro).
