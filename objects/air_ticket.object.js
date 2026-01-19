@@ -56,7 +56,6 @@ class airTicketObject {
     );
   }
   get loginHeader() {
-    // Scope the locator to the iframe first
     return this.page
       .frameLocator(
         "//iframe[contains(@src,'https://www.shohoz.com/login?embed=true')]",
