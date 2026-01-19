@@ -11,12 +11,18 @@ This is a web test automation framework, This automation script follows
 
 # Reasoning behind this approach
 
+- Page Object Model help separate page logic from test steps. When page changes, only page class need update, not many tests.
+- Reusable components and utilities reduce duplicate code. This make writing new tests faster and simpler.
+- Structured folders and clear naming help team member to find things quickly, even if they are new to project.
+- Reporting and retries give better visibility and reduce false failures. Easier to know why a test failed.
+- Using configs and fixtures keep tests consistent across environments and CI pipelines.
+- Parallel and modular tests allow scaling test suite without big slow down in execution time.
+- Clean and small functions make debugging faster and problems easier to fix.
+- Following these patterns reduce long term maintenance cost and keep framework stable for future changes.
+
+
 **Description:**
 - `tests/`: Contains all test case files.
-- `pages/`: Page Object Model classes for each page.
-- `utils/`: Utility functions and reporting tools.
-- `fixtures/`: Test data and mock files.
-- `.github/workflows/`: CI/CD pipeline configuration.
 - `playwright.config.ts`: Playwright configuration.
 - `package.json`: Project dependencies and scripts.
 - `readMe.md`: Project documentation.
