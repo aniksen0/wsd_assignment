@@ -107,7 +107,7 @@ class airTicketPage extends BasePage {
   {
     await this.page.mouse.click(10, 10);
   }
-  async captureFlightPrices()
+  async getFlightPrices()
   {
     const priceOnListLocator = this.airTicketObject.allPriceFromList;
     const count = await priceOnListLocator.count();
@@ -118,10 +118,10 @@ class airTicketPage extends BasePage {
       array.push(numericPrice);
     }
     console.log("Captured flight prices:", array);
-    let lower = 0;
+    let lower = parseInt(array[0]);
     for (let i = 0; i < array.length; i++) {
       const price = parseInt(Array[i], 10);
-      if (price < lower || lower === 0) {
+      if (price > lower) {
         lower = price;
       }
     }

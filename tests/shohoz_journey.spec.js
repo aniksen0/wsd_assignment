@@ -69,5 +69,5 @@ test.only('TC-11 Capture the prices of the currently listed flights into an arra
   await airTicket.clickContinueButton();
   await airTicket.verifyLoginHeader();
   await airTicket.closeSignInModal();
-  await airTicket.captureFlightPrices();
+  await airTicket.getFlightPrices();
 });
