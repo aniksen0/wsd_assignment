@@ -114,14 +114,14 @@ class airTicketPage extends BasePage {
     const array = [];
     for (let i = 0; i < count; i++) {
       const priceText = await priceOnListLocator.nth(i).innerText();
-      const numericPrice = priceText.replace(/[^\d]/g, '');
-      array.push(numericPrice);
+      const convertingPrice = priceText.replace(/[^\d]/g, '');
+      array.push(convertingPrice);
     }
     console.log("Captured flight prices:", array);
     let lower = parseInt(array[0]);
     for (let i = 0; i < array.length; i++) {
       const price = parseInt(Array[i], 10);
-      if (price > lower) {
+      if (price < lower) {
         lower = price;
       }
     }
