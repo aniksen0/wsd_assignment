@@ -120,7 +120,7 @@ class airTicketPage extends BasePage {
     console.log("Captured flight prices:", array);
     let lower = parseInt(array[0]);
     for (let i = 0; i < array.length; i++) {
-      const price = parseInt(Array[i], 10);
+      const price = parseInt(array[i], 10);
       if (price < lower) {
         lower = price;
       }
